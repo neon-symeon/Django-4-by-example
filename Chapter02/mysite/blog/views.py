@@ -73,7 +73,7 @@ def post_share(request, post_id):
             message = f"Read {post.title} at {post_url}\n\n" \
                       f"{cd['name']}\'s comments: {cd['comments']}"
             send_mail(subject, message, 'your_account@gmail.com',
-                      [cd['to']])
+                      [cd['email']])
             sent = True
 
     else:
